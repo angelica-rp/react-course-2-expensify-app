@@ -13,8 +13,16 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
 
-export { firebase, googleAuthProvider, database as default };
+//facebookAuthProvider.setCustomParameters({  'display': 'popup', auth_type: 'reauthenticate' });
+
+export { 
+  firebase, 
+  googleAuthProvider, 
+  facebookAuthProvider, 
+  database as default 
+};
 
 
 // database.ref('expenses').on('child_removed', (snapshot)=> {
